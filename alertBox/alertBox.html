@@ -13,7 +13,7 @@
     2. 필요할 때 보여달라고 JS로 요청 -->
     <div class="alert-box" id="alert">
         <p id="title">알림창</p>
-        <button>닫기</button>
+        <button id="close">닫기</button>
     </div>
     <button onclick="idAlert('아이디를 입력하세요');">버튼1</button>
     <button onclick="idAlert('비번을 입력하세요')">버튼2</button>
@@ -29,6 +29,11 @@
         //     document.getElementById('alert').style.display = 'none';
         // }
 
+        // 파라미터 사용
+        // function alert(oc) {
+        //     document.getElementById('alert').style.display = oc;
+        // }
+
         function idAlert(title) {
             // 1. p태그 내용을 아이디를 입력하세요 바꿈
             document.getElementById('title').innerHTML = title;
@@ -36,10 +41,11 @@
             document.getElementById('alert').style.display = 'block';
         }
        
-        // 파라미터 사용
-        // function alert(oc) {
-        //     document.getElementById('alert').style.display = oc;
-        // }
+        // addEventListener(event, function(){});
+        let close = document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display = 'none';
+        });
+        
     </script>
 </body>
 </html>
