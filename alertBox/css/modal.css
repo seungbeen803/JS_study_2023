@@ -5,7 +5,9 @@
     background: rgba(0, 0, 0, 0.5);
     z-index: 5;
     padding: 30px;
-    display: none;
+    /* display: none; 애니메이션을 줄 때 잘 사용하지 않음*/
+    visibility: hidden; /* 애니메이션줄때 display : none 대용 */
+    opacity: 0; /* 투명도 : 투명(0), 반투명(0.5), 불투명(1) */
 }
 .white-bg {
     background: white;
@@ -19,5 +21,15 @@
     display: block;
 }
 .show-modal {
-    display: block;
+    /* display: block; */
+    visibility: visible; /* display : block과 비슷 */
+    opacity: 1;
 }
+
+/* css 애니메이션 만들기 */
+/* one-way 애니메이션 : A상태 -> B상태
+1. 시작스타일
+2. 최종스타일
+3. 원할 때 최종스타일로 변하라고 JS코드 작성
+4. transition 추가 */
+
