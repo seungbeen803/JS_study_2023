@@ -8,6 +8,7 @@
     /* display: none; 애니메이션을 줄 때 잘 사용하지 않음*/
     visibility: hidden; /* 애니메이션줄때 display : none 대용 */
     opacity: 0; /* 투명도 : 투명(0), 반투명(0.5), 불투명(1) */
+    transition: all 1s; /* 모든 css속성이 변할 때 1초에 걸쳐서 서서히 변하게 하는 속성*/
 }
 .white-bg {
     background: white;
