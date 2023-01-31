@@ -39,7 +39,19 @@
       <div class="black-bg">
           <div class="white-bg">
               <h4>로그인하세요</h4>
-              <button class="btn btn-danger" id="close">닫기</button>
+              <!-- form태크를 사용하는 이유는 서버로 유저정보 전송을 위해 사용 -->
+              <form action="success.html">
+                <div class="my-3">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="my-3">
+                    <input type="password" class="form-control">
+                </div>
+                <!-- form 안의 전송버튼의 타입은 무조건 submit이어야한다 -->
+                <button type="submit" class="btn btn-primary">전송</button>
+                <!-- 일반버튼의 타입은 button -->
+                <button type="button" class="btn btn-danger" id="close">닫기</button>
+              </form>
           </div>
       </div>
     <script>
@@ -57,6 +69,13 @@
             $('.black-bg').removeClass('show-modal');
             // $('.black-bg').fadeOut();
         });
+
+        // 전송버튼 누르면(이벤트 리스너 사용)
+        $('.btn btn-primary').on('click', function(){
+            // 저기 input에 입력한 값이 공백이면 알림창 띄워주기
+
+        })
+
         </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
